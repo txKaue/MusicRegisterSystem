@@ -8,9 +8,9 @@ For more information i recommend you to read the Firebase documentation.
 ### How it works?
 
 To test, you have to install the requirements:
-```cmd
-    pip install -r requirements.txt
-
+```bash
+pip install -r requirements.txt
+```
 
 And then you should run "main.py" file.
 During the execution the program will make simple CRUD just to show to test te functions.
