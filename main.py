@@ -1,36 +1,11 @@
 from dataBase.data import Data
+from interface.interface import Interface
 
+#Criando a conexão com o banco de dados
 db = Data()
-print("Conexão criada")
 
-data = [
-    {
-        "Nome":"Espanca Joaninha",
-        "Cidade": "Taubaté",
-        "Tipo":"Cover"
-    },
-    {
-        "Nome":"Alucinados",
-        "Cidade": "Taubaté",
-        "Tipo":"Cover"
-    },
-    {
-        "Nome":"DMT",
-        "Cidade": "Taubaté",
-        "Tipo":"Autoral"
-    }
-]
+#Criando a nossa interface
+tl = Interface(db)
+tl.Abrir()
 
-for item in data:
-    db.AdicionarDados("Bandas", item)
-
-db.MostrarDados("Bandas")
-
-db.AlterarDados("Bandas", db.getIdByName("Bandas", "Espanca Joaninha"), {"Nome":"Spank LadyBug"})
-
-db.MostrarDados("Bandas")
-
-db.DeleteDados("Bandas", db.getIdByName("Bandas", "DMT"))
-
-db.MostrarDados("Bandas")
 

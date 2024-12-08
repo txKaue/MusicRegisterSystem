@@ -11,7 +11,11 @@ class Data:
         self.db = firestore.client()
 
     def AdicionarDados(self, colection, data):
-        self.db.collection(colection).add(data)
+        try:
+            self.db.collection(colection).add(data)
+            print("Dados adicionados com sucesso.")
+        except:
+            print("Erro ao adicionar ao banco de dados.")
 
     def GetDados(self, colection):
         data = self.collection(colection).get()
