@@ -10,19 +10,19 @@ You also can export the data to a excel file.
 
 ## Instalation
 1. Clone the repository:
-    ´´´bash
+    ```bash
     git clone https://github.com/txKaue/MusicRegisterSystem.git
     ```
 
 2. Install dependencies:
-    ´´´bash
+    ```bash
     pip install -r requirements.txt
-    ´´´
+    ```
 
 3. Run "main.py" file:
-    ´´´bash
+    ```bash
     python main.py
-    ´´´
+    ```
 
 ## How to use
 
