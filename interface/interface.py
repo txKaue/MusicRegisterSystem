@@ -1,12 +1,14 @@
 import tkinter as tk
 from tkinter import ttk, messagebox
 from dataBase.data import Data
+from utils.convert import Conversor
 
 class Interface:
 
     def __init__(self, dataBase):
         self.root = tk.Tk()
         self.db = dataBase #Transformando o banco em algo do objeto tela
+        self.cvt = Conversor()
         self.nomeInput = ""
         self.artistaInput = ""
         self.generoInput = ""
@@ -71,6 +73,8 @@ class Interface:
         self.listbox = tk.Listbox(rFrame, width=55, height=5, font=("Arial", 8))  # Definindo a altura para 5 itens visíveis
         self.listbox.pack(pady=10, padx= 10, anchor="nw")
         self.AtualizarLista()
+
+        ttk.Button(lFrame, text="Exportar Dados", command=self.Exportar).pack(pady=20)
 
     def SerializarInput(self, nome, artista, genero):
         data = {}
@@ -140,3 +144,8 @@ class Interface:
                 break
             else:
                 self.listbox.insert(tk.END, data[i])
+
+    def Exportar(self):
+        data = self.db.GetDados("Músicas")
+        self.cvt.ConverterExcel(data)
+        messagebox.showinfo("Documento Gerado", "Dados exportados para .xlsx")
