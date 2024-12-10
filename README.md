@@ -36,6 +36,18 @@ When the musics infomations appear, you also can update them.
 
 You can export database to a excel file (.xlsx) to work on your data.
 
+## Project structure:
+
+At root you will find 4 folders ("assets", "dataBase", "interface" and "utils") and 1 file (main.py). See the description bellow:
+- Assets: This folders is for images or other stetic items.
+- DataBase: This folder contains the dataBase class and here you will place your key to connect with FireBase (a json file, normally).
+- Interface: This folder contains the interface class.
+- Utils: This folder contains the converter class.
+- Main.py: This is the main file project. You must run this file to use the application.
+
+## Files and Functions:
+Next you'll see the application UML.
+
 ## License
 This projects was made by Kauê Teixeira and you can use this to training your programming skills and learn more about the technologies
 
