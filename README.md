@@ -50,3 +50,7 @@ Portuguese to English:
 - Nome = Name
 - Artista = Artist
 - Genero = Genre
+
+## Future Updates:
+
+You cant delete musics from database, so the next feature i'll add will be a deletion system.
