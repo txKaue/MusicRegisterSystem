@@ -42,7 +42,7 @@ This projects was made by Kauê Teixeira and you can use this to training your p
 ## Translations
 Portuguese to English:
 - Adicionar = Add
-- Busacr = Find
+- Buscar = Find
 - Adicionar Música = Add music
 - Buscar Música = Find music
 - Alterar Música = Update music
